@@ -1,9 +1,11 @@
 class Pymol < Formula
   include Language::Python::Virtualenv
+
   desc "Open-source PyMOL molecular visualization system"
   homepage "https://pymol.org/"
   url "https://github.com/schrodinger/pymol-open-source/archive/v2.3.0.tar.gz"
   sha256 "62aa21fafd1db805c876f89466e47513809f8198395e1f00a5f5cc40d6f40ed0"
+  revision 1
 
   bottle do
     root_url "https://linuxbrew.bintray.com/bottles-bio"
@@ -12,13 +14,9 @@ class Pymol < Formula
     sha256 "8621be3863ecfbf5e0140240d8a5bd648aea59a175a45766a57b64b089956db9" => :x86_64_linux
   end
 
-  depends_on "freeglut"
   depends_on "freetype"
   depends_on "glew"
-  depends_on "glm"
   depends_on "libpng"
-  depends_on "mmtf-cpp"
-  depends_on "msgpack"
   depends_on "pyqt"
   depends_on "python"
   depends_on "sip"
