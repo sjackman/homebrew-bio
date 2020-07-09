@@ -2,9 +2,9 @@ class Trinity < Formula
   # cite Grabherr_2011: "https://doi.org/10.1038/nbt.1883"
   desc "RNA-Seq de novo assembler"
   homepage "https://trinityrnaseq.github.io"
-  url "https://github.com/trinityrnaseq/trinityrnaseq/releases/download/v2.9.1/trinityrnaseq-v2.9.1.FULL.tar.gz"
-  version "2.9.1"
-  sha256 "98d98bc21cd5dd32b408ed52586d01a15873b49b96de3264d42616bdcfc9d455"
+  url "https://github.com/trinityrnaseq/trinityrnaseq/releases/download/v2.10.0/trinityrnaseq-v2.10.0.FULL.tar.gz"
+  version "2.10.0"
+  sha256 "4b349456363c84d36fee5f3608f608101510bfa5ae607a0939c8391aa931fd50"
 
   bottle do
     root_url "https://linuxbrew.bintray.com/bottles-bio"
@@ -13,6 +13,8 @@ class Trinity < Formula
     sha256 "369b95ac0b090cdacfffc31791c5eb88a37c5ddc5ee163b3c1f2cbaadf189dd6" => :x86_64_linux
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "cmake" => :build
   depends_on "bowtie2"
   depends_on "brewsci/bio/express"
